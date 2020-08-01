@@ -1,0 +1,37 @@
+version: '2'
+services:
+  dashboard_web:
+    ports:
+     - "80:80"
+    volumes:
+     - ../source:/var/www
+     - ../bin:/var/www/bin
+     - ./apache/sites-enabled:/etc/apache2/sites-enabled
+    links:
+     - dashboard_db
+    container_name: dashboard_web
+    build:
+      context: ./apache
+    environment:
+        XDEBUG_CONFIG: remote_host=10.0.75.1
+        PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/bin
+    networks:
+      - dashboard-network
+  dashboard_db:
+    ports:
+     - "3306:3306"
+    volumes:
+     - storage:/data/db
+     - ./init.sql:/data/application/init.sql
+    container_name: dashboard_db
+    image: mariadb
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root@2019
+      MYSQL_DATABASE: dashboard_dev
+    networks:
+      - dashboard-network
+volumes:
+  storage: {}
+networks:
+  dashboard-network:
