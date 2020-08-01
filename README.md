@@ -2,7 +2,7 @@
 
 A internal dash board build with Vue JS, Laravel for summarize team status at the moment. The data will be refreshed in realtime, some can be configured to be reloaded with a fix timer.
 
-<img width="500" alt="portfolio_view" src="https://user-images.githubusercontent.com/36194663/47360119-2ec3a600-d6ec-11e8-95a2-0b61d0bf0f11.png">
+<img width="500" alt="portfolio_view" src="https://github.com/phucdangit/vue-team-dashboard/blob/master/source/docs/images/screenshot20170127.jpg?raw=true">
  
 ## Tech Stacks
 
