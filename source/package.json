@@ -15,7 +15,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.13.0",
     "moment-duration-format": "^2.2.2",
-    "moment-timezone": "^0.5.13",
+    "moment-timezone": "^0.5.35",
     "postcss-easy-import": "^3.0.0",
     "pusher-js": "^4.0",
     "stringz": "^0.2.1",
